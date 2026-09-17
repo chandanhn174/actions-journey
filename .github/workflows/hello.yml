@@ -1,0 +1,9 @@
+name: first-official-github-actions-run
+on: push
+jobs:
+  first-githubaction-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet
+        run: echo "Welcome to GitHub actions"
+
