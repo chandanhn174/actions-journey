@@ -1,0 +1,14 @@
+name: real-workflow
+on: push
+jobs:
+  kernel-details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: "actions/checkout@4"
+      - name: Print kernel details
+        run: |
+          uname -a
+          find .
+      - name: Total no. of files
+        run: find . -type f | wc -l
