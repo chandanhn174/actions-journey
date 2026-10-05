@@ -1,0 +1,15 @@
+name: second-workflow
+on: push
+jobs:
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: "actions/checkout@v4"
+      - name: Show Kernel details and repo files
+        run: |
+          uname -a
+          ls -la
+      - name: Count repository files
+        run: |
+          find . -type f | wc -l
